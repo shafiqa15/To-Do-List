@@ -1,0 +1,92 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Brush Script MT", cursive;
+  background-image: url("../Assets/Unknown.gif");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.Board_Container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 70vh;
+  background-color: #f0f0f0;
+  margin-left: 50vh;
+  border-radius: 30px;
+  box-shadow: -20px 30px 60px 40px rgba(28, 131, 228, 0.2);
+  z-index: 2;
+}
+
+.Inside_Container {
+  align-items: center;
+  text-align: center;
+}
+
+#Add_task {
+  font-family: "Brush Script MT", cursive;
+  font-weight: bold;
+  font-size: 2em;
+  width: 11vh;
+  height: 6vh;
+  margin-top: 80vh;
+  border: 0px solid;
+  border-radius: 5px;
+  background-color: rgb(71, 71, 226);
+  color: white;
+}
+
+.list_tasks {
+  margin-top: -30vh;
+  font-size: 3em;
+  border: 0px solid;
+  border-radius: 5px;
+}
+
+.tasks {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -88vh;
+  width: 60vh;
+  height: 80vh;
+  background-image: url("../Assets/pinterest_\ @journey2jannah\ ♡.jpg");
+}
+
+.task {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 2em;
+}
+
+.deleted {
+  text-decoration: line-through;
+  color: grey;
+}
+#delete_button {
+  font-family: "Brush Script MT", cursive;
+  font-weight: bold;
+  font-size: 0.5em;
+  width: 10vh;
+  height: 3vh;
+  border: 0px solid;
+  border-radius: 5px;
+  background-color: rgb(71, 71, 226);
+  color: white;
+}

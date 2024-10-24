@@ -5,9 +5,6 @@ body {
   font-family: "Brush Script MT", cursive;
   background-image: url("../Assets/Unknown.gif");
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   min-width: 100%;
   min-height: 100%;
@@ -16,77 +13,122 @@ body {
 
 .Board_Container {
   display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 70vh;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  width: 80%;
+  max-width: 500px;
   background-color: #f0f0f0;
-  margin-left: 50vh;
+  margin: 0 auto;
   border-radius: 30px;
   box-shadow: -20px 30px 60px 40px rgba(28, 131, 228, 0.2);
   z-index: 2;
+  padding: 20px;
 }
 
 .Inside_Container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
 #Add_task {
   font-family: "Brush Script MT", cursive;
   font-weight: bold;
-  font-size: 2em;
-  width: 11vh;
-  height: 6vh;
-  margin-top: 80vh;
-  border: 0px solid;
+  font-size: 1.5em;
+  width: 100%;
+  max-width: 100px;
+  height: 50px;
+  border: none;
   border-radius: 5px;
   background-color: rgb(71, 71, 226);
-  color: white;
-}
+  box-shadow: -20px 30px 60px 40px rgba(28, 131, 228, 0.2);
 
-.list_tasks {
-  margin-top: -30vh;
-  font-size: 3em;
-  border: 0px solid;
-  border-radius: 5px;
+  color: white;
+  align-self: center;
+  margin-top: 10px;
 }
 
 .tasks {
   display: flex;
-  text-align: center;
   flex-direction: column;
   gap: 10px;
-  margin-top: -88vh;
-  width: 60vh;
-  height: 80vh;
+  width: 100%;
+  height: 75vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
   background-image: url("../Assets/pinterest_\ @journey2jannah\ ♡.jpg");
 }
 
 .task {
   padding: 10px;
-  margin: 10px 0;
+  margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 2em;
+  font-size: 1.5em;
+  background-color: rgb(209, 201, 201);
+}
+.button-container {
+  display: flex;
+  gap: 5px;
 }
 
 .deleted {
   text-decoration: line-through;
   color: grey;
 }
-#delete_button {
+
+#delete_button,
+#delete_button2 {
   font-family: "Brush Script MT", cursive;
   font-weight: bold;
-  font-size: 0.5em;
-  width: 10vh;
-  height: 3vh;
-  border: 0px solid;
+  font-size: 0.8em;
+  width: 11vh;
+  height: 5vh;
+  border: none;
   border-radius: 5px;
   background-color: rgb(71, 71, 226);
   color: white;
+}
+
+@media (max-width: 768px) {
+  #Add_task {
+    font-size: 1.5em;
+    height: 40px;
+  }
+
+  .task {
+    font-size: 1.2em;
+  }
+
+  .Board_Container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #Add_task {
+    font-size: 1.2em;
+    height: 35px;
+  }
+
+  .task {
+    font-size: 1em;
+  }
+
+  .Board_Container {
+    height: 100%;
+  }
+
+  .tasks {
+    height: 60vh;
+  }
 }

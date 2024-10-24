@@ -14,12 +14,11 @@
   justify-content: center;
   height: 60vh;
   width: 70vh;
-  background-color: #b5d2f0;
-  margin-left: -60vh;
+  background-color: rgb(209, 201, 201);
   border-radius: 30px;
-  box-shadow: -20px 30px 60px 40px rgba(28, 131, 228, 0.2);
+  box-shadow: -20px 30px 60px 40px rgba(205, 224, 241, 0.2);
   z-index: 2;
-  margin-top: 5vh;
+  margin-top: -90vh;
 }
 
 .Pop_Container {

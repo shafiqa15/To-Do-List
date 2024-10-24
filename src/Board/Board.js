@@ -22,8 +22,16 @@ function Board() {
   };
 
   const handleDeleteTask = (index) => {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    const confirm = window.confirm("Are you sure of deleteing this task ?");
+    if (confirm) {
+      setTasks(updatedTasks);
+    }
+  };
+
+  const handletaskdone = (index) => {
     const updatedTasks = tasks.map((task, i) =>
-      i === index ? { ...task, isDeleted: true } : task
+      i === index ? { ...task, isDeleted: !task.isDeleted } : task
     );
     setTasks(updatedTasks);
   };
@@ -35,6 +43,7 @@ function Board() {
         <button id="Add_task" onClick={handlePopup}>
           Add
         </button>
+
         <div className="tasks">
           {tasks.map((task, index) => (
             <Card
@@ -42,6 +51,7 @@ function Board() {
               task={task}
               index={index}
               handleDeleteTask={handleDeleteTask}
+              handletaskdone={handletaskdone}
             />
           ))}
         </div>

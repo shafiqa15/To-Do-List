@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "../Board/Board.css";
 import Popup from "../Popup/Popup";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import Card from "../Card/Card";
 
 function Board() {
   const [showPopup, setShowPopup] = useState(false);
@@ -38,20 +37,12 @@ function Board() {
         </button>
         <div className="tasks">
           {tasks.map((task, index) => (
-            <div
+            <Card
               key={index}
-              className={`task ${task.isDeleted ? "deleted" : ""}`}
-            >
-              <p>
-                Task {index + 1}: {task.text}
-              </p>
-              <button
-                id="delete_button"
-                onClick={() => handleDeleteTask(index)}
-              >
-                Delete <FontAwesomeIcon icon={faTrashAlt} />
-              </button>
-            </div>
+              task={task}
+              index={index}
+              handleDeleteTask={handleDeleteTask}
+            />
           ))}
         </div>
       </div>
